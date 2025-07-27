@@ -12,17 +12,22 @@ div.inner {
   overflow-x: hidden;
 }
 
+div.inner div#header {
+  background-color: #bcffcc;
+  padding: 12px;
+  margin: 0 0 24px;
+}
+
+div.inner div#header h1#title {
+  font-size: 6.4vw;
+  text-align: center;
+  width: 100%;
+}
+
 div.inner div#startOption {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-}
-
-div.inner div#startOption h1 {
-  font-size: 7.2vw;
-  margin: 12px 0;
-  text-align: center;
-  width: 100%;
 }
 
 div.inner div#startOption div.startBtn {
@@ -36,6 +41,133 @@ div.inner div#startOption div.startBtn {
 div.inner div#startOption div.startBtn:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+div.inner div#qSearch {
+  padding: 0 2%;
+  margin: 0 auto;
+}
+
+div.inner div#qSearch input[type="text"] {
+  border: 1px solid #a1a499;
+  box-sizing: border-box;
+  margin: 2px 0 12px;
+  padding: 4px;
+  width: 100%;
+}
+
+div.inner div#qSearch input[type="checkbox"] {
+  margin-right: 18px;
+}
+
+div.inner div#qSearch p#labelForResult {
+  margin: 20px 0 4px;
+  font-weight: bold;
+}
+
+div.inner div#qSearch table#searchResult {
+  border-collapse: collapse;
+}
+
+div.inner div#qSearch table#searchResult tr td {
+  border: 1px solid #a1a499;
+  padding: 2px;
+}
+
+div.inner div#qSearch table#searchResult tr td input[type="checkbox"] {
+  margin: 0;
+}
+
+div.inner div#qSearch table#searchResult tr td div {
+  display: flex;
+}
+
+div.inner div#qSearch table#searchResult tr td div p {
+  margin: 0;
+  max-width: 80%;
+}
+
+div.inner div#qSearch table#searchResult tr td div img {
+  box-sizing: border-box;
+  object-fit: contain;
+  padding-right: 2px;
+  max-width: 20%;
+}
+
+div.inner div#qSearch div#optionalStartBtn {
+  border-radius: 4px;
+  background-color: #ddd;
+  color: #fff;
+  font-size: 16px;
+  margin: 12px auto;
+  padding: 4px 12px;
+  text-align: center;
+  width: 36px;
+}
+
+div.inner div#qSearch div#optionalStartBtn.enabled {
+  background-color: #2c84cc;
+}
+
+div.inner div#qSearch div#optionalStartBtn.enabled:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+div.inner div#qSearch div#qExtractSet {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.inner div#qSearch div#qExtractSet div#blackboard {
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.75;
+}
+
+div.inner div#qSearch div#qExtractSet table#qExtract {
+  background-color: #fff;
+  border-collapse: collapse;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+}
+
+div.inner div#qSearch div#qExtractSet table#qExtract tr td {
+  border: 1px solid #a1a499;
+  padding: 2px;
+}
+
+div.inner div#qSearch div#qExtractSet table#qExtract tr td.ox {
+  padding: 2px 4px;
+  text-align: center;
+}
+
+div.inner div#qSearch div#qExtractSet table#qExtract tr td.children100 p {
+  width: 100%;
+}
+
+div.inner div#qSearch div#qExtractSet table#qExtract tr td.children100 img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 10vh;
+  object-fit: contain;
+}
+
+div.inner div#qSearch div#qExtractSet table#qExtract tr td div {
+  display: flex;
+}
+
+div.inner div#qSearch div#qExtractSet table#qExtract tr td div img {
+  margin-right: 2px;
+  max-width: 20%;
+  object-fit: contain;
 }
 
 div.inner div#questionArea {
@@ -159,12 +291,12 @@ div.inner div#nextQuestion:hover {
 }
 
 @media (orientation: landscape) {
-  div.inner div#startOption h1 {
+  div.inner div#header h1#title {
     font-size: 4vw;
   }
   div.inner div#questionArea {
     font-size: 14px;
-    max-width: 540px;
+    max-width: 640px;
     padding: 8px 10px 16px;
   }
   div.inner div#questionArea div#question img {
@@ -189,8 +321,12 @@ div.inner div#nextQuestion:hover {
 }
 
 @media (min-width: 768px) {
-  div.inner div#startOption h1 {
-    font-size: 40px;
+  div.inner div#header h1#title {
+    font-size: 36px;
+  }
+  div.inner div#startOption {
+    margin: 0 auto;
+    max-width: 640px;
   }
 }
 
